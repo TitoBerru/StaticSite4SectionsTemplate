@@ -1,0 +1,125 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: background 0.3s, padding 0.3s;
+}
+
+header.scrolled {
+  background: rgba(51, 51, 51, 0.8);
+  padding: 5px 20px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Secciones */
+.section {
+  height: 90vh; // Cambiara aca para el largo de cada seccion
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+#section1 { background: #FFCDD2; }
+#section2 { background: #C8E6C9; }
+#section3 { background: #BBDEFB; }
+#section4 { background: #FFF9C4; }
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  header {
+      flex-wrap: wrap;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  header nav {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%; /* Ahora ocupa todo el ancho */
+      background: #333;
+      padding: 10px 0;
+      box-sizing: border-box;
+  }
+
+  header nav.show {
+      display: flex;
+  }
+
+  header nav a {
+      padding: 10px 20px;
+      width: 100%; /* Cada enlace ocupa todo el ancho */
+      text-align: left;
+  }
+}
+
+@media (min-width: 769px) {
+  header nav {
+      justify-content: flex-end;
+  }
+
+  header.scrolled .logo {
+      font-size: 1.2rem;
+  }
+}

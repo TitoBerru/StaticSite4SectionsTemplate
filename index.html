@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web Estático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header id="navbar">
+        <div class="logo">Mi Sitio</div>
+        <button id="menu-toggle" class="hamburger">&#9776;</button>
+        <nav id="menu">
+            <a href="#section1">Sección 1</a>
+            <a href="#section2">Sección 2</a>
+            <a href="#section3">Sección 3</a>
+            <a href="#section4">Sección 4</a>
+        </nav>
+    </header>
+
+    <!-- Secciones -->
+    <main>
+        <section id="section1" class="section">Sección 1</section>
+        <section id="section2" class="section">Sección 2</section>
+        <section id="section3" class="section">Sección 3</section>
+        <section id="section4" class="section">Sección 4</section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Funcionalidad del botón hamburguesa
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
